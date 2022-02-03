@@ -15,10 +15,11 @@
             </div>
 
             <div class="random-activity">
-                <div class="act-text" id="act-text"></div>
+                <div class="act-text" id="act-text">CLICK BUTTON TO START GAME</div>
                 <div>
-                    <button id="done"> done that!</button>
-                    <button id="not"> haven't yet!</button>
+                    <button id='start' onclick="showButtons()">START</button>
+                    <button id="done" onclick="clickedButton(this.value)" value='1'> done that!</button>
+                    <button id="not" onclick="clickedButton(this.value)" value='2'> haven't yet!</button>
                 </div>
             </div>
 

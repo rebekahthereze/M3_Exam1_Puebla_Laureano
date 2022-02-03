@@ -78,3 +78,15 @@ button {
     padding: 10px;
 
 }
+#done{
+    display: none;
+}
+#not{
+    display:none;
+}
+
+/*Style for new added box*/
+/*Design something here for new box*/
+.newBox{
+
+}
