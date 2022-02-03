@@ -1,8 +1,7 @@
-// let done = document.getElementById('done');
-// let not = document.getElementById('not');
-
 // if user clicks start, the start button will dissappear
 //while the other two buttons will appear
+var didCounter = 0;
+var notCounter = 0; 
 function showButtons(){
     document.getElementById('start').style.display='none';
     document.getElementById('done').style.display='inline-block';
@@ -42,12 +41,27 @@ function clickedButton(value){
     //if user click 'Done that', adds to the 'already did that' container
     if(value=='1'){
         addToDos(act);
-        changeActivity();
+        didCounter += 1;
+        if (didCounter == 5) {
+            document.getElementById('buttons').style.visibility = "hidden";
+            document.getElementById('act-text').innerHTML = 'You win!';
+        }
+        else {
+            changeActivity();
+        }
+        
     }
     //if user click 'Haven't yet', adds to the 'Haven't done that' container
     if(value=='2'){
         addToDonts(act);
-        changeActivity();
+        notCounter += 1;
+        if (notCounter == 5) {
+            document.getElementById('buttons').style.visibility = "hidden";
+            document.getElementById('act-text').innerHTML = 'You lose!';
+        }
+        else {
+            changeActivity();
+        }
     }
 }
 

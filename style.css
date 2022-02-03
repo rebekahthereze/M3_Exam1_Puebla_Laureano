@@ -19,6 +19,7 @@ html {
 }
 
 .body-container {
+    visibility: visible;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -89,4 +90,8 @@ button {
 /*Design something here for new box*/
 .newBox{
 
+}
+
+.buttons {
+    visibility: visible;
 }
